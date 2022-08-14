@@ -1,2 +1,2 @@
 # Alura-eccomerce
-Pyoyecto desarrollado durante el  BootCamp de Oracle
+Proyecto desarrollado durante el  BootCamp de Oracle
