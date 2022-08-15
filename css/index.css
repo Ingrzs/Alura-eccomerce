@@ -98,4 +98,26 @@
     padding-left: 10%;
     padding-right: 10%;
     justify-content: space-between;
+    gap: .5rem;
+}
+
+.container_footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 2%;
+}
+
+.footer__enlaces p{
+  line-height: 2;
+}
+
+.footer_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_form form{
+    display: flex;
+    flex-direction: column;
 }
