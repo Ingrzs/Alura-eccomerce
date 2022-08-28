@@ -161,3 +161,11 @@
 .footer_pie .pie_text{
     text-align: center;
 }
+
+.divlist{
+    background-color: #EAF2FD;
+}
+
+.divlist li{
+    list-style: none;
+}
