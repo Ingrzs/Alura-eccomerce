@@ -5,8 +5,7 @@ const divlist = document.createElement("div");
 divlist.className= "divlist";
 divform.appendChild(divlist);
 
-const Productos = loadproducts();
-
+const Products = loadproducts();
 
 function ChangeItem(event) {
     let data = event.target.value;
@@ -20,7 +19,7 @@ function ChangeItem(event) {
   }
   
   function filter(value){
-   const filtervalues = Productos.filter((v) => v.toLowerCase().includes(value.toLowerCase()))
+   const filtervalues = Products.filter((v) => v.toLowerCase().includes(value.toLowerCase()))
    return filtervalues;
   }
   
@@ -34,6 +33,5 @@ function ChangeItem(event) {
         divlist.innerHTML = ``;
      }
   }
-
   export  { ChangeItem }
   export  {selectItem}
