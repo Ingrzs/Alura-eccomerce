@@ -1,8 +1,12 @@
+import { loadproducts } from "./productslist.js"
+
 const divform = document.querySelector(".header__form");
 const divlist = document.createElement("div");
 divlist.className= "divlist";
 divform.appendChild(divlist);
-const Productos = ["consola","xbox","pc","psp","silla","pantalla","pc","laptop","monitor","cpu","ssd","ram","procesador","mouse","teclado"];
+
+const Productos = loadproducts();
+
 
 function ChangeItem(event) {
     let data = event.target.value;
