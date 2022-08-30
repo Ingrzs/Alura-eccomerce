@@ -4,6 +4,7 @@ const divform = document.querySelector(".header__form");
 const divlist = document.createElement("div");
 divlist.className= "divlist";
 divform.appendChild(divlist);
+const input = document.querySelector(".search_input");
 
 const Products = loadproducts();
 
@@ -29,7 +30,8 @@ function ChangeItem(event) {
   
   function selectItem(event) {
     if (event.target.tagName === 'LI') {
-        input.value = target.textContent;
+        let li = event.target
+        input.value = li.textContent; 
         divlist.innerHTML = ``;
      }
   }
