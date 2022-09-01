@@ -1,12 +1,14 @@
 import {ChangeItem,selectItem} from "./components/autocomplete.js"
-
+import{searchsaveproduct} from "./components/searchproduct.js"
 const input = document.querySelector(".search_input");
 input.addEventListener("input",ChangeItem);
 
 const elements_li = document.querySelector(".divlist");
 elements_li.addEventListener("click",selectItem);
 
-const button_search = document.querySelector(".button_search")
+const button_search = document.querySelector(".button_search");
+button_search.addEventListener("click",searchsaveproduct)
+
 
 
 
