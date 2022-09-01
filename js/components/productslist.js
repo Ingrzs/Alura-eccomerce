@@ -26,5 +26,3 @@ export function loadproducts(){
 const Products = Products_gadgets.concat(Products_consolas,Products_diverses);
 return Products;
 }
-
-console.log(loadproducts())
