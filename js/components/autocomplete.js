@@ -7,7 +7,6 @@ divform.appendChild(divlist);
 const input = document.querySelector(".search_input");
 
 const Products = loadproducts();
-
 function ChangeItem(event) {
     let data = event.target.value;
     divlist.innerHTML = ``;
@@ -37,3 +36,4 @@ function ChangeItem(event) {
   }
   export  { ChangeItem }
   export  {selectItem}
+  export {Products}
