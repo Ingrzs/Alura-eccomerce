@@ -1,12 +1,10 @@
-import { loadproducts } from "./productslist.js"
-
+import { totalproducts } from "./productslist.js";
 const divform = document.querySelector(".header__form");
 const divlist = document.createElement("div");
 divlist.className= "divlist";
 divform.appendChild(divlist);
 const input = document.querySelector(".search_input");
 
-const Products = loadproducts();
 function ChangeItem(event) {
     let data = event.target.value;
     divlist.innerHTML = ``;
@@ -19,7 +17,7 @@ function ChangeItem(event) {
   }
   
   function filter(value){
-   const filtervalues = Products.filter((v) => v.toLowerCase().includes(value.toLowerCase()))
+   const filtervalues = totalproducts.filter((v) => v.toLowerCase().includes(value.toLowerCase()))
    return filtervalues;
   }
   
@@ -36,4 +34,3 @@ function ChangeItem(event) {
   }
   export  { ChangeItem }
   export  {selectItem}
-  export {Products}
