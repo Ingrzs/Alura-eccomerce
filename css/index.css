@@ -97,7 +97,7 @@
     padding-right: 10%;
     justify-content: space-between;
 }
-.products__gadgets,.products__consoles,.products__diverses{
+.Items_gadgets,.Items_consolas,.Items_diversos{
     display: flex;
     flex-wrap: wrap;
     padding-left: 10%;
@@ -106,7 +106,7 @@
     gap: .5rem;
 }
 
-.products__gadgets img,.products__consoles img,.products__diverses img{
+.Items_gadgets img,.Items_consolas img,.Items_diversos img{
     width: 150px;
     height: 100px;
 }
