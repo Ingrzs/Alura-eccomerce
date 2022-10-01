@@ -1,36 +1,40 @@
-import { totalproducts } from "./productslist.js";
+import { AllProducts } from "./Products.js";
+
+const Totalproduct = AllProducts();
+
 const divform = document.querySelector(".header__form");
-const divlist = document.createElement("div");
-divlist.className= "divlist";
-divform.appendChild(divlist);
+const list = document.createElement("div");
+list.className = "divlist";
+divform.appendChild(list);
 const input = document.querySelector(".search_input");
 
-function ChangeItem(event) {
-    let data = event.target.value;
-    divlist.innerHTML = ``;
-    console.log(data.length);
-    if (data.length) {
-      let autoCompleteValues = filter(data);
-      autoCompleteValues.forEach(value => { AddItem(value);
-      });
-     }
+export const ChangeItem = (event) => {
+  let data = event.target.value;
+  list.innerHTML = ``;
+  console.log(data.length);
+  if (data.length) {
+    let autoCompleteValues = filter(data);
+    autoCompleteValues.forEach((value) => {
+      AddItem(value);
+    });
   }
-  
-  function filter(value){
-   const filtervalues = totalproducts.filter((v) => v.toLowerCase().includes(value.toLowerCase()))
-   return filtervalues;
+};
+
+const filter = (value) => {
+  const filtervalues = Totalproduct.filter((v) =>
+    v.toLowerCase().includes(value.toLowerCase())
+  );
+  return filtervalues;
+};
+
+const AddItem = (value) => {
+  list.innerHTML += `<li>${value}</li>`;
+};
+
+export const selectItem = (event) => {
+  if (event.target.tagName === "LI") {
+    let li = event.target;
+    input.value = li.textContent;
+    list.innerHTML = ``;
   }
-  
-  function AddItem(value) {
-   divlist.innerHTML += `<li>${value}</li>`;
-  }
-  
-  function selectItem(event) {
-    if (event.target.tagName === 'LI') {
-        let li = event.target
-        input.value = li.textContent; 
-        divlist.innerHTML = ``;
-     }
-  }
-  export  { ChangeItem }
-  export  {selectItem}
+};
