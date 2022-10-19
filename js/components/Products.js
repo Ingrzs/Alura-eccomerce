@@ -4,49 +4,43 @@ import {
   ProductsDiversos,
 } from "../../Services/data.js";
 
-export const Gadgets = (v) =>
-  ProductsGadgets.forEach((object) => {
-    let Item = document.createElement("div");
-    Item.classList.add(".Item");
-    Item.innerHTML =
-      `<img src=${object.img}>` +
-      `<p>${object.nombre}</p>` +
-      `<p>$${object.precio}</p>` +
-      `<a href=#>${object.ver}</a>`;
-    v.appendChild(Item);
+import { CreateProduct } from "./Createproduct.js";
+
+export const Gadgets = (v) => {
+  ProductsGadgets.forEach((product) => {
+    let Itemproduct = CreateProduct(product);
+    v.appendChild(Itemproduct);
+  });
+};
+
+export const Consolas = (v) => {
+  ProductsConsolas.forEach((product) => {
+    let Itemproduct = CreateProduct(product);
+    v.appendChild(Itemproduct);
+  });
+};
+
+export const Diversos = (v) => {
+  ProductsDiversos.forEach((product) => {
+    let Itemproduct = CreateProduct(product);
+    v.appendChild(Itemproduct);
+  });
+};
+
+
+export const Products = () => {
+  let Gadgets = Object.entries(ProductsGadgets).map(([key, value]) => {
+    return value;
   });
 
-export const Consolas = (v) =>
-  ProductsConsolas.forEach((object) => {
-    let Item = document.createElement("div");
-    Item.classList.add(".Item");
-    Item.innerHTML =
-      `<img src=${object.img}>` +
-      `<p>${object.nombre}</p>` +
-      `<p>$${object.precio}</p>` +
-      `<a href=#>${object.ver}</a>`;
-    v.appendChild(Item);
+  let Consolas = Object.entries(ProductsConsolas).map(([key, value]) => {
+    return value
   });
 
-export const Diversos = (v) =>
-  ProductsDiversos.forEach((object) => {
-    let Item = document.createElement("div");
-    Item.classList.add(".Item");
-    Item.innerHTML =
-      `<img src=${object.img}>` +
-      `<p>${object.nombre}</p>` +
-      `<p>$${object.precio}</p>` +
-      `<a href=#>${object.ver}</a>`;
-    v.appendChild(Item);
+  let Diversos = Object.entries(ProductsDiversos).map(([key, value]) => {
+    return value
   });
 
-export const AllProducts = () => {
-  let productsconsolas = ProductsConsolas.map((e) => e.nombre);
-  let productsgadgets = ProductsGadgets.map((e) => e.nombre);
-  let productsdiversos = ProductsDiversos.map((e) => e.nombre);
-  const AllProducts = productsgadgets.concat(
-    productsconsolas,
-    productsdiversos
-  );
-  return AllProducts;
+  const Products = Gadgets.concat(Consolas, Diversos);
+  return Products;
 };
