@@ -15,7 +15,7 @@ export const ChangeItem = (event) => {
   if (data.length) {
     let autoCompleteValues = filter(data);
     autoCompleteValues.forEach((value) => {
-      AddItem(JSON.stringify(value.nombre).replace(/['"]+/g, ''));
+      AddItem(JSON.stringify(value.nombre).replace(/['"]+/g, ""));
     });
   }
 };
@@ -24,8 +24,8 @@ const filter = (value) => {
   const filtervalues = Totalproduct.filter((v) =>
     v.nombre.toLowerCase().includes(value.toLowerCase())
   );
-  
-  return filtervalues
+
+  return filtervalues;
 };
 
 const AddItem = (value) => {
