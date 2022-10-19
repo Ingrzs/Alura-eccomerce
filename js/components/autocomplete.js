@@ -1,6 +1,6 @@
-import { AllProducts } from "./Products.js";
+import { Products } from "./Products.js";
 
-const Totalproduct = AllProducts();
+const Totalproduct = Products();
 
 const divform = document.querySelector(".header__form");
 const list = document.createElement("div");
@@ -15,16 +15,17 @@ export const ChangeItem = (event) => {
   if (data.length) {
     let autoCompleteValues = filter(data);
     autoCompleteValues.forEach((value) => {
-      AddItem(value);
+      AddItem(JSON.stringify(value.nombre).replace(/['"]+/g, ''));
     });
   }
 };
 
 const filter = (value) => {
   const filtervalues = Totalproduct.filter((v) =>
-    v.toLowerCase().includes(value.toLowerCase())
+    v.nombre.toLowerCase().includes(value.toLowerCase())
   );
-  return filtervalues;
+  
+  return filtervalues
 };
 
 const AddItem = (value) => {
