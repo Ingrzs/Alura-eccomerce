@@ -1,14 +1,19 @@
-/*
-import{FormularioNav, Openpage} from "./components/Formnav.js"*/
-import { Gadgets, Consolas, Diversos } from "./components/Products.js";
+import {
+  DisplayGadgets,
+  DisplayConsolas,
+  DisplayDiversos,
+} from "./components/DisplayProducts.js";
 import { ChangeItem, selectItem } from "./components/Autocomplete.js";
+import { SearchNav } from "./components/Formnav.js";
+import { ClickProduct } from "./components/ClickProduct.js";
 
 const Items_gadgets = document.querySelector(".Items_gadgets");
 const Items_consolas = document.querySelector(".Items_consolas");
 const Items_diversos = document.querySelector(".Items_diversos");
-Gadgets(Items_gadgets);
-Consolas(Items_consolas);
-Diversos(Items_diversos);
+
+DisplayGadgets(Items_gadgets);
+DisplayConsolas(Items_consolas);
+DisplayDiversos(Items_diversos);
 
 const input = document.querySelector(".search_input");
 input.addEventListener("input", ChangeItem);
@@ -16,24 +21,10 @@ input.addEventListener("input", ChangeItem);
 const elements_li = document.querySelector(".divlist");
 elements_li.addEventListener("click", selectItem);
 
-/*
 const button_search = document.querySelector(".button_search");
-button_search.addEventListener("click",FormularioNav)
-*/
+button_search.addEventListener("click", SearchNav);
 
-//this is a list with datalist and option test
-/*const producto = Listaproductos.forEach(element => {
-   const data_list = document.getElementById("datos").getElementsByTagName("option");
-   const a = `<option value="${element}"></option>`
-   const x = element
-   data_list.innerHTML = a;
-   console.log(data_list);
+const elementsItems = document.querySelectorAll(".Item");
+elementsItems.forEach((elements) => {
+  elements.lastChild.addEventListener("click", ClickProduct);
 });
-
-let test = Listaproductos.forEach(element =>{
-    const element_datalist = document.querySelector("#datos");
-    const element_option = document.createElement("option");
-    element_option.value = element
-    element_datalist.appendChild(element_option);
-    ;
-});*/
