@@ -28,3 +28,6 @@ const elementsItems = document.querySelectorAll(".Item");
 elementsItems.forEach((elements) => {
   elements.lastChild.addEventListener("click", ClickProduct);
 });
+
+const btnlogin = document.querySelector(".btnlogin")
+btnlogin.addEventListener("click" ,() => location.href = "login.html");
