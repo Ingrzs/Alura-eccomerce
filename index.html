@@ -5,10 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
-    <script
-      src="https://kit.fontawesome.com/a3e517dd97.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://kit.fontawesome.com/a3e517dd97.js" crossorigin="anonymous"></script>
     <title>Ecommerce</title>
   </head>
   <body>
@@ -32,40 +30,65 @@
           </form>
         </div>
         <div class="header__login">
-          <button type="button" class="btnlogin" title="Iniciar Sesion">Login</button>
+          <button type="button" class="btnlogin" title="Iniciar Sesion">
+            Login
+          </button>
         </div>
       </div>
     </header>
 
     <section>
-      <div class="container_banner">
-        <img src="./assets/banner-image.png" alt="banner" />
-        <!--<img src="https://cdn.pixabay.com/photo/2017/11/29/13/28/a-discount-2986181__340.jpg">
-        <img src="https://img.freepik.com/free-psd/social-media-banner-special-offer-super-sale-template-up-50_220664-2996.jpg?w=826&t=st=1666569145~exp=1666569745~hmac=1199d4251bf8426f6be756d6e17630543ea16cc6c42c554317ea86d01911fb8a">
-        --><div class="banner__text">
-          <h2>Hoy de promocion</h2>
-          <p>Productos seleccionados con 50% de descuento</p>
-          <button type="button">Ver promociones</button>
+      <div class="container_swiper">
+         <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <a href=""
+              ><img
+                src="https://img.freepik.com/free-photo/studio-shot-glad-female-student-has-coffee-break-after-lectures-listens-audio-book-headphones-enjoys-record-from-website-uses-mobile-phone-chatting-online-has-rucksack-back_273609-26859.jpg?w=740&t=st=1669586025~exp=1669586625~hmac=483e89d8d38a5256594b07d3928119d4edc06683d16aa6977dbac5e0dfd29c8d"
+                alt=""
+            /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""
+              ><img
+                src="https://img.freepik.com/free-photo/man-with-copy-space-futuristic-device_23-2148864987.jpg?w=826&t=st=1669585918~exp=1669586518~hmac=0ddd043bc6dadbaa985dc53d7f8843a2303210f78cafed1378090d22491016d0"
+                alt=""
+            /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""
+              ><img
+                src="https://cdn.pixabay.com/photo/2019/10/21/11/35/camera-4565859_960_720.jpg"
+                alt=""
+            /></a>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
         </div>
       </div>
-
+     
+    
+      
       <div class="container_products">
         <div class="container_gadgets">
           <div class="title__gadgets">
             <h3>Gadgets</h3>
             <p><a href="#">Ver todo</a></p>
           </div>
-          <div class="Items_gadgets">
-          </div> 
+          <div class="Items_gadgets"></div>
         </div>
-     
+
         <div class="container_consoles">
           <div class="title__consoles">
             <h3>Consolas</h3>
             <p><a href="#">Ver todo</a></p>
           </div>
-          <div class="Items_consolas">
-          </div>
+          <div class="Items_consolas"></div>
         </div>
 
         <div class="container_diverses">
@@ -73,11 +96,11 @@
             <h3>Diversos</h3>
             <p><a href="#">Ver todo</a></p>
           </div>
-          <div class="Items_diversos">
-          </div>
+          <div class="Items_diversos"></div>
         </div>
       </div>
     </section>
+
     <footer>
       <div class="container_footer">
         <div class="footer__logo">
@@ -107,7 +130,8 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="./js/script.js">
-    </script>
+    <script type="module" src="./js/script.js"></script>
+    <script src="./js/components/slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
