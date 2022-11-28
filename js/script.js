@@ -6,15 +6,17 @@ import {
 import { ChangeItem, selectItem } from "./components/Autocomplete.js";
 import { SearchNav } from "./components/Formnav.js";
 import { ClickProduct } from "./components/ClickProduct.js";
-
+import { swiper } from "./components/slider.js";
 const Items_gadgets = document.querySelector(".Items_gadgets");
 const Items_consolas = document.querySelector(".Items_consolas");
 const Items_diversos = document.querySelector(".Items_diversos");
+
 
 DisplayGadgets(Items_gadgets);
 DisplayConsolas(Items_consolas);
 DisplayDiversos(Items_diversos);
 
+swiper();
 const input = document.querySelector(".search_input");
 input.addEventListener("input", ChangeItem);
 
@@ -31,3 +33,4 @@ elementsItems.forEach((elements) => {
 
 const btnlogin = document.querySelector(".btnlogin")
 btnlogin.addEventListener("click" ,() => location.href = "login.html");
+
