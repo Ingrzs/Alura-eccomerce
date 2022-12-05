@@ -16,7 +16,7 @@ DisplayGadgets(Items_gadgets);
 DisplayConsolas(Items_consolas);
 DisplayDiversos(Items_diversos);
 
-swiper();
+
 const input = document.querySelector(".search_input");
 input.addEventListener("input", ChangeItem);
 
@@ -34,3 +34,4 @@ elementsItems.forEach((elements) => {
 const btnlogin = document.querySelector(".btnlogin")
 btnlogin.addEventListener("click" ,() => location.href = "login.html");
 
+swiper();
