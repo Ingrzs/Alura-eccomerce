@@ -2,7 +2,7 @@ import { Products } from "./Products.js";
 
 const Totalproduct = Products();
 
-const divform = document.querySelector(".header__form");
+const divform = document.querySelector(".header_formulario");
 const list = document.createElement("div");
 list.className = "divlist";
 divform.appendChild(list);
